@@ -67,18 +67,18 @@ export const showUsers = async(req, res) =>{
 }
  //ELIMINAR USUARIOS 
 
- export const deleteUserByID = async (request, response) => {
+ export const deleteUserByID = async (req, res) => {
     try {
-        let idForDelete = request.params.ID;
+        let idForDelete = req.params.ID;
         //lo que se elimina no se tiene que guardar en una variable 
         await userModel.findByIdAndDelete(idForDelete);
 
-        return response.status(200).json({
+        return res.status(200).json({
             mensaje: 'usuario eliminado satisfactoriamente'
         })
 
     } catch (error) {
-        return response.status(400).json({
+        return res.status(400).json({
             mensaje: 'ocurrio un error al eliminar el usuario',
             problem: error || error.message
         });

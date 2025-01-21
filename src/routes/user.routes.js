@@ -6,5 +6,5 @@ import auth from '../middleware/auth.js';
 
  export const usersRouter = express.Router();
 usersRouter.post('/crear', createUser);
-usersRouter.get('/obtener',auth("administrador"), showUsers);
-usersRouter.delete('/borrar/:ID',auth("administrador"), deleteUserByID);
+usersRouter.get('/obtener',/*(auth("administrador"),*/ showUsers);
+usersRouter.delete('/borrar/:ID',/*auth("administrador"),*/deleteUserByID);

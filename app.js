@@ -21,8 +21,6 @@ app.use('/usuarios', usersRouter);
 app.use('/iniciarSesion', loginRouter);
 
 
-const port = process.env.PORT;
 
-app.listen (port, ()=> {
-    console.log("se esta ejecutando el puerto " + port)
-});  
+
+export default app;

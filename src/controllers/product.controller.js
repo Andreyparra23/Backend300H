@@ -1,7 +1,6 @@
 import { productModel } from "../models/model_licores.js";
 
 
-
 //---------------------------------------------------------POST
 export const postProduct = async (request, response) => {
 
@@ -111,40 +110,7 @@ export const deleteProductById = async (request, response) => {
 
 }
 
-//-------------------------------------------- GET x categoria
 
-export const getProductByCategory = async (request, response) => {
-    try {
-        const categoryProducts = request.params.categoriadellicor
-
-
-        // Usa la funcion find() porque es mas de una coleccion con esa categoria
-        // Debe mandarla en objeto porque la funcion find() lo requiere
-        const productoEncontrado = await productModel.find({ category: categoryProducts });
-
-        if (productoEncontrado.length === 0) {
-            return response.status(200).json({
-                estado: 400,
-                mensaje: "No se encontraron licores con esa categoría"
-            })
-        }
-
-
-        return response.status(200).json({
-            estado: 200,
-            mensaje: "Se encontraron los siguientes licores",
-            producto: productoEncontrado
-        })
-
-    } catch (error) {
-        return response.status(400).json({
-            mensaje: 'ocurrio un error al eliminar producto',
-            problem: error || error.message
-        });
-
-    }
-
-}
 
 
   
