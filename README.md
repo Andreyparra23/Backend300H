@@ -46,6 +46,9 @@ conexion exitosa con la base de datos.</b>
 <li>Dotenv
 <li>Jsonwebtoken
 
+se realizaron test para los controladores de usuarios y de productos, se adjunta foto de que paso cada una de sus pruebas 
+
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/9174c85e-64e5-4f54-991a-4532960d5bfa" />
 
 
 
